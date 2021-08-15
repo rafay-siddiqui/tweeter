@@ -54,4 +54,9 @@ article footer div {
 .tweet-icon {
   margin: 0.2em;
   color: #4056A1;
+  transition: 0.3s color;
+}
+
+.tweet-icon:hover {
+  color: #c47f46;
 }
