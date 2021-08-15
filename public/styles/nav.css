@@ -35,7 +35,7 @@ p.tweet-banner {
   position: relative;
 }
 
-header, nav {
+header.profile, nav {
   left: 0;
   top: 0;
   position: absolute;

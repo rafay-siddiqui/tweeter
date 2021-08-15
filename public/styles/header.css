@@ -1,4 +1,4 @@
-header {
+header.profile {
   /* Must increase header size by nav size to get desired 400px height"*/
   height: 520px;
   width: 100%;
@@ -9,11 +9,11 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/subtle-grunge.png");
 }
 
-header div h2 {
+header.profile div h2 {
   margin-top: 0.6em;
   margin-bottom: 0;
 }
 
-header div img {
+header.profile div img {
   margin-top: 130px;
 }
