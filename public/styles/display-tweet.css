@@ -3,6 +3,11 @@ article {
   border-width: 0.2em;
   margin-top: 1em;
   margin-bottom: 1em;
+  transition: 0.3s box-shadow;
+}
+
+article:hover {
+  box-shadow: 0.3em 0.3em #bec4fa;
 }
 
 article header {
