@@ -1,6 +1,7 @@
 section.new-tweet {
   color: #606060;
   font-family: "Bungee", sans-serif;
+  margin-bottom: 2em;
 }
 
 .new-tweet>div {
@@ -16,7 +17,7 @@ section.new-tweet {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-width: 5px;
+  border-width: 0.2em;
   resize: none;
   color: inherit;
   border-color: #606060;
@@ -38,4 +39,8 @@ form div button {
 
 form div output {
   align-self: flex-end;
+}
+
+output.charLimit {
+  color: #FF0000;
 }

@@ -1,0 +1,57 @@
+article {
+  border-style: solid;
+  border-width: 0.2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article header img {
+  align-self: center;
+  height: 2em;
+  width: 2em;
+  margin: 0.5em;
+}
+
+article header span {
+  margin: 1em;
+  margin-left: auto;
+  color: #909090;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+article>p {
+  margin: 1em;
+}
+
+article>hr {
+  margin: 0.5em;
+  border: none;
+  height: 0.2em;
+  background-color: #606060;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+article footer small {
+  margin-left: 1em;
+}
+
+article footer div {
+  justify-content: space-evenly;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.tweet-icon {
+  margin: 0.2em;
+  color: #4056A1;
+}
