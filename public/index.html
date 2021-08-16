@@ -75,7 +75,9 @@
       <!-- New Tweet Form -->
       <section class="new-tweet">
         <div>
-          <h2>Compose Tweet</h2>
+          <div class="validation">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
           <form method="post" action="/tweets">
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
             <div>
@@ -87,8 +89,7 @@
       </section>
 
       <!-- JQuery Tweet Element Appender -->
-      <div id="tweets-container">
-      </div>
+      <div id="tweets-container"></div>
 
 
     </main>

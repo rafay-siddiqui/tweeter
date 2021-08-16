@@ -11,6 +11,7 @@ section.new-tweet {
 }
 
 #tweet-text {
+  margin-top: 2em;
   width: 100%;
   height: 3em;
   background-color: inherit;
@@ -43,4 +44,20 @@ form div output {
 
 output.charLimit {
   color: #FF0000;
+}
+
+.validation {
+  margin: 0.8em;
+  width: 70%;
+  color: red;
+  border: 0.2em solid red;
+  background-color: #FFb3b2;
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.validation i {
+  margin: 1em;
 }

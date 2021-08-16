@@ -7,15 +7,30 @@
 //Waits for all static elements to load before executing
 $(document).ready(() => {
 
+  //Webpage opens with no validation error
+  $('.validation').hide();
+
   //Uses AJAX to to post to /tweets endpoint to avoid redirection
   $('.new-tweet form').submit(function(event) {
     event.preventDefault();
+    //Resets the validation message
+    $('.validation p').remove();
+    $('.validation').slideUp(200);
+    //Validates if tweet is over the limit/empty and hides/shows validation message as appropriate
     const textData = $(this).serialize();
     if ($(this).children('textarea').val().length > 140) {
-      alert("Tweet is over 140 character limit");
+      setTimeout(() => {
+        $('.validation').append("<p>Tweet is over 140 character limit</p>")
+        $('.validation').slideDown(200)
+      }, 200);
     } else if ($(this).children('textarea').val().length < 1) {
-      alert("Tweet is empty");
+      setTimeout(() => {
+        $('.validation').append("<p>Tweet is empty</p>")
+        $('.validation').slideDown(200)
+      }, 200);
     } else {
+      $('.validation').slideUp(100);
+      $('.validation p').remove();
       $.ajax({
         type: 'POST',
         url: '/tweets',
