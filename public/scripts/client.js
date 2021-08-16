@@ -21,13 +21,13 @@ $(document).ready(() => {
     const textData = $(this).serialize();
     if ($(this).children('textarea').val().length > 140) {
       setTimeout(() => {
-        $('.validation').append("<p>Tweet is over 140 character limit</p>")
-        $('.validation').slideDown(200)
+        $('.validation').append("<p>Tweet is over 140 character limit</p>");
+        $('.validation').slideDown(200);
       }, 200);
     } else if ($(this).children('textarea').val().length < 1) {
       setTimeout(() => {
-        $('.validation').append("<p>Tweet is empty</p>")
-        $('.validation').slideDown(200)
+        $('.validation').append("<p>Tweet is empty</p>");
+        $('.validation').slideDown(200);
       }, 200);
     } else {
       $('.validation').slideUp(100);
@@ -43,7 +43,7 @@ $(document).ready(() => {
           $("#tweets-container").load("/ #tweets-container");
           this.reset();
 
-        })
+        });
     }
   });
 
@@ -89,7 +89,7 @@ $(document).ready(() => {
     for (let obj of tweetsArray) {
       $('#tweets-container').append(createTweetElement(obj));
     }
-  }
+  };
 
   //Fetches tweet data from /tweets using AJAX
   const loadTweets = () => {
@@ -101,4 +101,4 @@ $(document).ready(() => {
 
   loadTweets();
 
-})
+});
