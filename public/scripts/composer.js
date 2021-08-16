@@ -1,7 +1,10 @@
 $(document).ready(() => {
 
+
+  //Hides top-of-page scroller
   $('.scroll-top').hide();
 
+  //Checks if window has been scrolled down enough and shows top-of-page button
   $(window).on('scroll', (event) => {
     if ($(window).scrollTop() > 100) {
       $('.scroll-top').show(200);
@@ -10,6 +13,7 @@ $(document).ready(() => {
     }
   })
 
+  //Top of page animation
   $('.scroll-top').on('click', function() {
     $('html, body').animate({ scrollTop: 0 }, 700);
     $('#tweet-text').focus();
@@ -21,6 +25,7 @@ $(document).ready(() => {
     var formView = $(this);
     const newTweet = document.getElementById('tweet-text');
     //Needed different view toggles based on window size due to overlay formatting
+    //Checks for desktop window width
     if ($(window).width() > 1049) {
       if (formView.is(".on")) {
         newTweet.scrollIntoView(true);
@@ -31,6 +36,7 @@ $(document).ready(() => {
         window.scrollBy(0, 15);
         formView.removeClass("off").addClass("on");
       }
+      //Checks for mobile window width
     } else {
       if (formView.is(".on")) {
         newTweet.scrollIntoView(true);
