@@ -57,6 +57,6 @@ $(document).ready(() => {
       });
   };
 
-  loadTweets(data);
+  loadTweets();
 
 })
