@@ -5,8 +5,9 @@
  */
 
 $(document).ready(() => {
-  
+
 const createTweetElement = (tweetObj) => {
+  const timePassed = timeago.format(tweetObj.created_at);
   const $tweet = $(`
   <article class="tweet">
   
@@ -20,7 +21,7 @@ const createTweetElement = (tweetObj) => {
     <hr>
 
     <footer>
-      <small>${tweetObj.created_at}</small>
+      <small>${timePassed}</small>
       <div>
         <i class="fas fa-heart tweet-icon"></i>
         <i class="fas fa-retweet tweet-icon"></i>
