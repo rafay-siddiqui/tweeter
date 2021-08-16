@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   //Used multiple event triggers to account for mouse drag pasting text into textarea and for refreshing
-  $('#tweet-text').on('keyup input change', function(event) {
+  $('#tweet-text').on('keyup input', function(event) {
     const tweetLength = $(this).val().length;
     $(this).parent().find('output').html(140 - tweetLength);
 

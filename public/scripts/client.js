@@ -42,6 +42,7 @@ $(document).ready(() => {
           loadTweets();
           $("#tweets-container").load("/ #tweets-container");
           this.reset();
+          $('output').html(140);
 
         });
     }
