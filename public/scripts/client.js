@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(() => {
+  
 const createTweetElement = (tweetObj) => {
   const $tweet = $(`
   <article class="tweet">
@@ -45,6 +47,5 @@ const tweetData = {
 
 const $tweet = createTweetElement(tweetData);
 
-$(document).ready(() => {
   $('#tweets-container').append($tweet);
 })
