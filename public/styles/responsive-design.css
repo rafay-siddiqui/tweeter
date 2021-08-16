@@ -1,3 +1,35 @@
-@media screen {
-  
+/* Desktop Responsive Design */
+@media all and (min-width:1050px) {
+  nav {
+    background-color: #4056A1;
+  }
+
+  body {
+    display: flex;
+  }
+
+  #overlay {
+    height: 120px;
+  }
+
+  main {
+    width: 60%;
+    align-self: flex-end;
+    margin-right: 2em;
+    margin-bottom: 1em;
+    overflow: scroll;
+  }
+
+  header.profile {
+    width: 25%;
+    height: 380px;
+    margin: 2em;
+    margin-top: 200px;
+    position: fixed;
+  }
+
+  header.profile div img {
+    margin-top: 20px;
+  }
+
 }
