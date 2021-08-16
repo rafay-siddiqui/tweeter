@@ -11,7 +11,7 @@ $(document).ready(() => {
     } else {
       $('.scroll-top').hide(200);
     }
-  })
+  });
 
   //Top of page animation
   $('.scroll-top').on('click', function() {
@@ -52,7 +52,7 @@ $(document).ready(() => {
 
   //Triggers form toggle
   $('.tweet-banner').on('click', (event) => {
-    $("#tweet-text").trigger("formView:toggle")
-  })
+    $("#tweet-text").trigger("formView:toggle");
+  });
 
 });
