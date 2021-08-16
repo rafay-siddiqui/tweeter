@@ -46,6 +46,5 @@ const tweetData = {
 const $tweet = createTweetElement(tweetData);
 
 $(document).ready(() => {
-  console.log($tweet);
   $('#tweets-container').append($tweet);
 })
