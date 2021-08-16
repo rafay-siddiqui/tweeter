@@ -31,9 +31,17 @@ $(document).ready(() => {
     }
   });
 
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //'Creates new tweet element' for appending to index.html
   const createTweetElement = (tweetObj) => {
     const timePassed = timeago.format(tweetObj.created_at);
+    const safeUserInput = escape(tweetObj.content.text);
     const $tweet = $(`
   <article class="tweet">
   
@@ -43,7 +51,7 @@ $(document).ready(() => {
       <span>${tweetObj.user.handle}</span>
     </header>
 
-    <p>${tweetObj.content.text}</p>
+    <p>${safeUserInput}</p>
     <hr>
 
     <footer>
