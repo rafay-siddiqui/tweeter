@@ -94,7 +94,7 @@ $(document).ready(() => {
   const loadTweets = () => {
     $.ajax('/tweets', { method: "GET" })
       .then(function(tweetData) {
-        renderTweets(tweetData);
+        renderTweets(tweetData.reverse());
       });
   };
 
