@@ -6,6 +6,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+![Mobile View](./docs/tweeter-demo4.png)
+
+![Desktop View](./docs/tweeter-demo5.png)
+
 ![Tweets Display](./docs/tweeter-demo1.gif)
 
 ![Form Validation](./docs/tweeter-demo2.gif)
