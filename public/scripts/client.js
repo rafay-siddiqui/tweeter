@@ -8,7 +8,40 @@
 $(document).ready(() => {
 
   //Webpage opens with no validation error
+  $('#warning').addClass('validation');
   $('.validation').hide();
+
+  //Toggles between scrolling new tweet and existing tweets into view
+  $("#tweet-text").on("formView:toggle", function(event) {
+    var formView = $(this);
+    const newTweet = document.getElementById('tweet-text');
+    //Needed different view toggles based on window size due to overlay formatting
+    if ($(window).width() > 1049) {
+      if (formView.is(".on")) {
+        newTweet.scrollIntoView(true);
+        window.scrollBy(0, -200);
+        formView.removeClass("on").addClass("off");
+      } else {
+        newTweet.scrollIntoView(true);
+        window.scrollBy(0, 15);
+        formView.removeClass("off").addClass("on");
+      }
+    } else {
+      if (formView.is(".on")) {
+        newTweet.scrollIntoView(true);
+        formView.removeClass("on").addClass("off");
+        window.scrollBy(0, -48);
+      } else {
+        document.getElementById('tweets-container').scrollIntoView(true);
+        window.scrollBy(0, -20);
+        formView.removeClass("off").addClass("on");
+      }
+    }
+  });
+
+  $('.tweet-banner').on('click', (event) => {
+    $("#tweet-text").trigger("formView:toggle")
+  })
 
   //Uses AJAX to to post to /tweets endpoint to avoid redirection
   $('.new-tweet form').submit(function(event) {
