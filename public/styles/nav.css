@@ -22,7 +22,6 @@ div.tweet-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align: right;
   text-align: center;
 }
 
