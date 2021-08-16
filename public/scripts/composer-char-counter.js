@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("waiting...");
   
   //Used multiple event triggers to account for mouse drag pasting text into textarea
   $('#tweet-text').on('keyup input', function(event) {

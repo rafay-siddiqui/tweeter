@@ -6,6 +6,16 @@
 
 $(document).ready(() => {
 
+  $('.new-tweet form').submit(function(event) {
+    event.preventDefault();
+    const textData = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: textData
+    })
+  });
+
   const data = [
     {
       "user": {
