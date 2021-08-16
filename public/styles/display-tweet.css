@@ -32,6 +32,7 @@ article header span {
 
 article>p {
   margin: 1em;
+  margin-top: 0.5em;
 }
 
 article>hr {
