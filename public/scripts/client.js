@@ -39,6 +39,7 @@ $(document).ready(() => {
     }
   });
 
+  //Triggers form toggle
   $('.tweet-banner').on('click', (event) => {
     $("#tweet-text").trigger("formView:toggle")
   })
