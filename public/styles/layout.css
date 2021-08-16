@@ -21,13 +21,34 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 main {
   width: 90%;
   background-color: inherit;
+  align-self: center;
 }
+
+.scroll-top {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  bottom: 0;
+  margin: 0.5em;
+  font-size: 2.5em;
+  color: #c96248;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: 0.3s color;
+}
+
+.scroll-top:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+  color: red;
+}
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

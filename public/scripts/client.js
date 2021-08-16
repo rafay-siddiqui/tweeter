@@ -7,6 +7,26 @@
 //Waits for all static elements to load before executing
 $(document).ready(() => {
 
+  setInterval(() => {
+    console.log($(window).scrollTop());
+  })
+
+  $('.scroll-top').hide();
+
+  $(window).on('scroll', (event) => {
+    if ($(window).scrollTop() > 100) {
+      $('.scroll-top').show(200);
+    } else {
+      $('.scroll-top').hide(200);
+    }
+  })
+
+  $('.scroll-top').on('click', function(){
+		$('html, body').animate({scrollTop : 0},700);
+    $('#tweet-text').focus();
+    return false;
+	});
+
   //Webpage opens with no validation error
   $('#warning').addClass('validation');
   $('.validation').hide();
