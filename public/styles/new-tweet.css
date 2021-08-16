@@ -21,7 +21,7 @@ section.new-tweet {
   resize: none;
   color: inherit;
   border-color: #606060;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  /*background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");*/
   font-family: "Source Sans Pro", sans-serif;
 }
 
